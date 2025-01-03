@@ -1,0 +1,47 @@
+.main_nav {
+  box-sizing: border-box;
+  background-color: var(--bg-secondary);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  z-index: 5;
+}
+
+.nav_container {
+  display: flex;
+  align-items: center;
+  max-width: 1366px;
+  margin: auto;
+  width: 100%;
+}
+
+.main_nav .nav_container h2 {
+  color: var(--text-secondary);
+  margin-right: 2.5rem;
+}
+
+.nav_container .buttons_container {
+  display: flex;
+  margin-left: auto;
+}
+
+.nav_container .buttons_container .nav_btn {
+  display: block;
+  padding: 0.85rem 0.6rem;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.nav_container .buttons_container .nav_btn_book {
+  background-color: rgba(255, 255, 255, 0.17);
+  color: var(--text-secondary);
+}
+
+.nav_container .buttons_container .nav_btn_test {
+  background-color: #ffffff;
+  color: var(--text-primary);
+}
