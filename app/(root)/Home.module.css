@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 1rem;
 }
 
 .mainTextContainer h1 {
@@ -17,11 +18,18 @@
   background-clip: content-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 8rem;
+  font-size: 10vw;
   font-weight: bold;
+  text-align: center;
 }
 
 .mainTextContainer p {
   font-size: 2rem;
   font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .mainTextContainer h1 {
+    font-size: 15vw;
+  }
 }

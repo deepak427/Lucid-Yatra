@@ -45,3 +45,13 @@
   background-color: #ffffff;
   color: var(--text-primary);
 }
+
+@media (max-width: 507px) {
+  .nav_container .buttons_container .nav_btn_test {
+    display: none;
+  }
+
+  .nav_container .buttons_container .nav_btn {
+    margin-right: 0;
+  }
+}
