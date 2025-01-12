@@ -1,0 +1,27 @@
+.skewContainer {
+  transform: skewY(-1.5deg);
+  overflow: hidden;
+  height: 50vh;
+}
+
+.mainTextContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mainTextContainer h1 {
+  background-image: url("/images/hero-banner.webp");
+  background-repeat: round;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+.mainTextContainer p {
+  font-size: 2rem;
+  font-weight: bold;
+}

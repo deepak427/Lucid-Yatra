@@ -1,0 +1,14 @@
+.container {
+    margin-top: calc(0.85rem*2 + 0.5rem*2 + 1.5rem);
+    border-top: 1px solid orange;
+}
+
+.loading {
+  color: var(--text-primary);
+  font-size: 1.75rem;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+}

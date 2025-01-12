@@ -14,8 +14,8 @@ const Navbar = () => {
           >
             Book Travel Now
           </Link>
-          <Link href="/" className= {`${styles.nav_btn} ${styles.nav_btn_test}`}>
-            Free Test Yatra
+          <Link href="/explore" className= {`${styles.nav_btn} ${styles.nav_btn_test}`}>
+            Explore Us
           </Link>
         </div>
       </nav>
