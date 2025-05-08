@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { Suspense } from "react";
 
 export default function RootLayout({
   children,
@@ -8,7 +9,8 @@ export default function RootLayout({
   return (
     <>
       <Navbar />
-      {children}
+      {<Suspense fallback={<div>Loading...</div>}>{children}</Suspense>}
+      {}
     </>
   );
 }

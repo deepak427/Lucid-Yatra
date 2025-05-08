@@ -7,13 +7,23 @@ const Navbar = () => {
     <header className={styles.main_nav}>
       <nav className={styles.nav_container}>
         <h2>LuYa</h2>
+
+        <ul className={styles.navLinks}>
+          <li>
+            <Link href="/explore">Explore</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+        </ul>
+
         <div className={styles.buttons_container}>
           <Link
-            href="https://docs.google.com/forms/d/e/1FAIpQLScKVwjL1riqMm6wWXtsLQj77rLQWJZZwuSscssuJBru5SBy1w/viewform?usp=header"
+            href="/book"
             className={`${styles.nav_btn} ${styles.nav_btn_book}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Book your travel now via Google Forms"
           >
             Book Travel Now
           </Link>

@@ -24,6 +24,48 @@
   margin-right: 2.5rem;
 }
 
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  transition: all 0.3s ease;
+  margin-left: auto;
+}
+
+.navLinks li {
+  position: relative;
+  overflow: hidden;
+}
+
+.navLinks li a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--border-secondary);
+  transition: width 0.3s ease;
+}
+
+.navLinks li a:hover::after {
+  width: 100%;
+}
+
+.navLinks li a:hover {
+  color: var(--border-secondary);
+}
+
 .nav_container .buttons_container {
   display: flex;
   margin-left: auto;

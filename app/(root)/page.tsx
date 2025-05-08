@@ -1,13 +1,13 @@
-import { Metadata } from "next";
+"use client";
+
 import styles from "./Home.module.css";
 import Image from "next/image";
-
-export const metadata: Metadata = {
-  title: "Lucid Yatra - Go better",
-  description: "Personalized and secure travel experience",
-};
+import { useSearchParams } from "next/navigation";
 
 export default function Home() {
+  const searchParams = useSearchParams();
+  const thankyou = searchParams.get("thankyou");
+
   return (
     <>
       <main className={styles.homeMain}>
@@ -19,6 +19,11 @@ export default function Home() {
             fill={true}
           />
         </div>
+        {thankyou === "true" && (
+          <div className={styles.thankYouMessage}>
+            🎉 Thank you for your pre-order!
+          </div>
+        )}
         <section className={styles.mainTextContainer}>
           <h1>Lucid Yatra</h1>
           <p>Go better</p>
