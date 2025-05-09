@@ -1,9 +1,79 @@
 .container {
-    margin-top: calc(0.85rem*2 + 0.5rem*2 + 1.5rem);
-    border-top: 1px solid var(--bg-primary);
+  margin-top: calc(0.85rem*2 + 0.5rem*2 + 1.5rem);
+  padding: 2rem;
+  background-color: #fdfcf9;
 }
 
-.loading {
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 32px;
+  justify-content: center;
+}
+
+.photoCard {
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 2px 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  transform-origin: center center;
+  cursor: pointer;
+}
+
+.photoCard:hover {
+  transform: scale(1.03) rotate(0deg);
+  box-shadow: 4px 12px 24px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.imageWrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.caption {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #444;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Rotations */
+.tiltLeft {
+  transform: rotate(-5deg);
+}
+.tiltRight {
+  transform: rotate(5deg);
+}
+.tiltLeftSmall {
+  transform: rotate(-2.5deg);
+}
+.tiltRightSmall {
+  transform: rotate(2.5deg);
+}
+
+/* Paper tape corner */
+.photoCard::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  width: 45px;
+  height: 20px;
+  background: #f5e4c3;
+  transform: rotate(-10deg);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+/* .loading {
   color: var(--text-primary);
   font-size: 1.75rem;
 }
@@ -15,4 +85,4 @@
 
 .videoContainer media-theme-sutro {
   overflow: hidden;
-}
+} */

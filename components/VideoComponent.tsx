@@ -7,6 +7,7 @@ export async function VideoComponent({ fileName }: { fileName: string }) {
     prefix: fileName,
     limit: 1,
   });
+  console.log(blobs);
   const { url } = blobs[0];
 
   return (
