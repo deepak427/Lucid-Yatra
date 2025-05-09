@@ -21,7 +21,8 @@
 
 .main_nav .nav_container h2 {
   color: var(--text-secondary);
-  margin-right: 2.5rem;
+  position: absolute;
+  left: 2.5rem;
 }
 
 .navLinks {
@@ -88,12 +89,64 @@
   color: var(--text-primary);
 }
 
-@media (max-width: 507px) {
-  .nav_container .buttons_container .nav_btn_test {
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--bg-primary);
+  cursor: pointer;
+}
+
+.nav_book_btn {
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 769px) {
+  .nav_container .buttons_container .nav_btn {
     display: none;
   }
 
-  .nav_container .buttons_container .nav_btn {
-    margin-right: 0;
+  .nav_book_btn {
+    display: block;
+  }
+
+  .nav_container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 2.5rem;
+    top: 1.2rem;
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .navLinks.show {
+    max-height: 31rem;
+    padding: 1rem 0;
+  }
+
+  .navLinks li {
+    margin-bottom: 1rem;
+  }
+
+  .main_nav .nav_container h2 {
+    position: static;
+    text-align: left;
   }
 }
