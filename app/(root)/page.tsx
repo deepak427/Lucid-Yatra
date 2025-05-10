@@ -3,6 +3,8 @@
 import styles from "./Home.module.css";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
+import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection"
 
 export default function Home() {
   const searchParams = useSearchParams();
@@ -11,23 +13,29 @@ export default function Home() {
   return (
     <>
       <main className={styles.homeMain}>
-        <div className={styles.skewContainer}>
+        <div className={styles.heroSection}>
           <Image
-            src={"/images/hero-banner.webp"}
+            src="/images/hero-banner.webp"
             alt="Hero Banner"
-            objectFit={"cover"}
-            fill={true}
+            fill
+            priority
+            className={styles.heroImage}
           />
+          <div className={styles.overlay}></div>
+          <div className={styles.mainTextContainer}>
+            <h1>Kshetra</h1>
+            <p>Start your spiritual journey here</p>
+          </div>
         </div>
+
         {thankyou === "true" && (
           <div className={styles.thankYouMessage}>
             🎉 Thank you for your pre-order!
           </div>
         )}
-        <section className={styles.mainTextContainer}>
-          <h1>Lucid Yatra</h1>
-          <p>Go better</p>
-        </section>
+
+        <AboutSection />
+        <ContactSection />
       </main>
     </>
   );

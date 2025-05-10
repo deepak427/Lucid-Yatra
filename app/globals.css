@@ -18,3 +18,7 @@
   --btn-primary: rgb(40, 40, 40);
   --transition-speed: 0.3s;
 }
+
+html {
+  scroll-behavior: smooth;
+}

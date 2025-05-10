@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <header className={styles.main_nav}>
       <nav className={styles.nav_container}>
-        <h2>LuYa</h2>
+        <h2>Kshetra</h2>
 
         <button
           className={styles.hamburger}
@@ -35,10 +35,10 @@ const Navbar = () => {
             <Link href="/explore">Explore</Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="#about">About</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="#contact">Contact</Link>
           </li>
           <li className={styles.nav_book_btn}>
             <Link href="/book">Book</Link>
